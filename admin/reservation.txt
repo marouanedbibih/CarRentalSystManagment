@@ -1,0 +1,19 @@
+        <?php
+        @include("../assets/php/connexionDataBase.php");
+        $reqPreClient = $mydb->prepare("SELECT * FROM client");
+        $reqPreReservation = $mydb->prepare("SELECT * FROM  Reservation");
+
+        $reqPreClient->execute();
+        $reqPreReservation->execute();
+
+        $resultatClient = $reqPreClient->fetchAll();
+        $resultatReservation = $reqPreReservation->fetchAll();
+
+        $resultatClient;
+        $resultatReservation;
+
+        $json_data_client = json_encode($resultatClient);
+        $json_data_reservation = json_encode($resultatReservation);
+        ?>
+
+        recupere les donne de reservation( id reservation,pickup locatio,drop location,pickup date,drop date,car type ,configuration,text message ,id client and recuperer les donne de client qui fais reservation au table client avec pdo method and fetch all object and i want function javascript qui afficher les information dans une tableau html automoatique

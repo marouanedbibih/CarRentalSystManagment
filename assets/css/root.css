@@ -1,0 +1,114 @@
+:root{
+    /* Color Key */
+    --primary: #F77D0A;
+    --primary-dark: #e67308;
+    --primary-dark-trsp: #914907;
+    --primary-transparant: hsla(29, 93%, 47%, 0.3);
+    --secondary: #2B2E4A;
+    --secondary-dark: hsla(234, 26%, 23%, 0.5);
+    --light-white: #F4F5F8;
+    --dark: #1C1E32;
+    --light: #F4F5F8;
+    --text-gray:#8486A0;
+
+    /*Fonts Type*/
+    --primary-font:'Poppins', sans-serif;
+    --secondary-font:'Lato', sans-serif;
+
+    /*Fonts Size*/
+    --regular:400;
+    --bold:700;
+
+    /*Size Desktop*/
+    --title-desk:32px;
+    --sous-title-desk:24px;
+    --prg-desk:16px;
+    --navbar-height:15vh;
+
+    /*Size Phone*/
+    --title-phone:24px;
+    --sous-title-phone:16px;
+    --prg-phone:8px;
+
+    /*Padding Desktop*/
+    --primary-padding:30px;
+    --secondary-padding:20px;
+
+    /*Margin Desktop*/
+    --primary-margin:30px;
+    --secondary-margin:20px;
+
+    /*Padding Phone*/
+    --primary-padding:20px;
+    --secondary-padding:15px;
+    /*Margin Phone*/
+    --primary-margin:20px;
+    --secondary-margin:15px;
+    /*Border Size*/
+    --border-btn:15px;
+    --border-glb:20px;
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+h1{
+    font-family: var(--primary-font);
+    font-size: var(--logo-desk);
+    font-weight: var(--bold);
+    text-transform: uppercase;
+    text-align: center;
+}
+h2{
+    font-family: var(--primary-font);
+    font-size: var(--title-desk);
+    font-weight: var(--regular);
+}
+h3{
+    font-family: var(--primary-font);
+    font-size: var(--sous-title-desk);
+    font-weight: var(--regular);
+}
+p{
+    font-family: var(--secondary-font);
+    font-size: var(--prg-desk);
+    font-weight: var(--regular);
+}
+.btn-style{
+    width: 100px;
+    height: 50px;
+    outline: none;
+    border-radius: var(--border-btn);
+    border: 0;
+    text-align: center;
+    font-family: var(--primary-font);
+}
+.btn-style:hover{
+    transform: scale(1.1);
+    transition: 0.7s ease;
+}
+.input-style{
+    width: 400px;
+    height: 30px;
+    border-radius: var(--border-btn);
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    margin: 10px 0;
+    font-family: var(--primary-font);
+    background-color: var(--light);
+}
+.border-radius{
+    border-radius: 15px;
+}
+.height-100{
+    height: 100vh;
+}
+.bg-orange{
+    background-color: var(--primary);
+}
+.bg-orange-dark-trsp{
+    background-color: var(--primary-dark-trsp);
+}

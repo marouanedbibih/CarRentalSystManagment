@@ -1,0 +1,29 @@
+Table "client":
+
+id : identifiant unique du client (clé primaire)
+first_name : prénom du client
+last_name : nom de famille du client
+phone : numéro de téléphone du client
+email : adresse email du client
+
+Table "reservation":
+
+id : identifiant unique de la réservation (clé primaire)
+pickup_location : lieu de prise en charge de la voiture
+drop_location : lieu de retour de la voiture
+pickup_date : date et heure de prise en charge de la voiture
+drop_date : date et heure de retour de la voiture
+car_id : identifiant unique de la voiture réservée (clé étrangère vers la table "voiture")
+configuration : configuration de la voiture réservée
+text_message : message texte optionnel associé à la réservation
+
+Table "voiture":
+
+id : identifiant unique de la voiture (clé primaire)
+type_car : type de la voiture (ex: citadine, berline, SUV...)
+model_car : modèle de la voiture (ex: Renault Clio, Peugeot 308...)
+model_year : année du modèle de la voiture
+configuration : configuration de la voiture
+km : kilométrage de la voiture
+price : prix de location par jour de la voiture
+Avec cette structure de base de données, vous pouvez enregistrer les informations des clients, les réservations de voitures, ainsi que les détails des voitures disponibles à la location. Les tables "client" et "voiture" peuvent être remplies à l'avance, tandis que la table "reservation" sera remplie au fur et à mesure que les clients effectueront des réservations.

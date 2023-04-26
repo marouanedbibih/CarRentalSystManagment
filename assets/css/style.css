@@ -1,0 +1,642 @@
+@import url(./root.css);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--primary-font);
+
+}
+section {
+    padding: 100px 100px;
+    background-color: var(--light);
+}
+/*---------Service Home---------------*/
+header {
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 50px 12px 100px;
+    transition: 0.5s ease;
+    box-sizing: border-box;
+
+}
+
+header .brand {
+    color: var(--primary);
+    font-size: 1.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.header .navigation {
+    position: relative;
+}
+/*-------------------------------------------------------------*/
+.navigation-items a {
+    color: #fff;
+    position: relative;
+    font-size: 1em;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: 0.3s ease;
+}
+
+.navigation-items a.active {
+    color: var(--primary);
+}
+
+.navigation-items a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    color: white;
+    transition: width 0.3s;
+}
+
+.navigation-items a.active:hover::after {
+    color: white;
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.navigation-items a.active::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary);
+    color: var(--primary);
+    transition: width 0.3s;
+}
+.navigation-items a:hover::after {
+    color: var(--primary);
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+.navigation i {
+    display: none;
+}
+
+.navigation-button-section {
+    z-index: 000;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(80px);
+    margin-bottom: 12px;
+}
+
+.navigation-button-section .navigation-btn {
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+    transition: 0.3s ease;
+    margin: 12px;
+}
+
+.navigation-button-section .navigation-btn:hover {
+    transform: scale(1.8);
+    background-color: var(--primary);
+}
+
+.navigation-btn.active {
+    transform: scale(1.8);
+    background-color: var(--primary);
+    box-shadow: 0 0 10px white;
+}
+.navigation-button-section {
+    z-index: 888;
+    position: relative;
+    top: -20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(80px);
+    margin-bottom: 12px;
+}
+
+.navigation-button-section .navigation-btn {
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+    transition: 0.3s ease;
+    margin: 12px;
+}
+
+.navigation-button-section .navigation-btn:hover {
+    transform: scale(1.8);
+    background-color: var(--primary);
+}
+
+.navigation-btn.active {
+    transform: scale(1.8);
+    background-color: var(--primary);
+    box-shadow: 0 0 10px white;
+}
+/*-------------------------------------------------------------*/
+.home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--primary);
+    box-sizing: border-box;
+}
+
+.home .content {
+    z-index: 888;
+    color: white;
+    width: 70%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.home .content h1 {
+    text-align: left;
+    font-size: 4em;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.home .content h1 span {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.home .content p {
+    margin-bottom: 10px;
+}
+
+.home .content button {
+    width: 240px;
+    height: 60px;
+    background-color: transparent;
+    border: solid 3px white;
+    color: white;
+}
+
+.home .content button:hover {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.home .social-media-home-icons {
+    z-index: 888;
+    position: absolute;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s ease;
+}
+
+.home .social-media-home-icons a {
+    color: white;
+    font-size: 1.5em;
+    margin: 15px;
+    margin-bottom: 20px;
+    transition: 0.5s ease;
+}
+
+.home .social-media-home-icons a:hover {
+    transform: scale(1.3);
+    color: var(--primary);
+}
+
+.home video {
+    z-index: 000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+/*-------------------------------------------------------------*/
+.vedio-slide {
+    position: absolute;
+    width: 100%;
+    clip-path: circle(0% at 0 50%);
+}
+
+.vedio-slide.active {
+    clip-path: circle(150% at 0 50%);
+    transition: 2s ease;
+    transition-property: clip-path;
+}
+
+/*-------------------------------------------------------------*/
+/*Responsive Home */
+@media(max-width:1350px) {
+    .navigation-button-section {
+        top: 0;
+    }
+
+    .home .content button {
+        width: 200px;
+        height: 50px;
+    }
+
+    .navigation-button-section {
+        top: -30px;
+    }
+
+}
+
+@media (max-width:1096px) {
+    .home .content h1 {
+        font-size: 3em;
+    }
+
+    section {
+        padding: 10px 20px;
+    }
+
+    header {
+        padding: 12px 50px 12px 20px;
+    }
+
+}
+
+@media(max-width:912px) {
+    .home .content h1 {
+        font-size: 2.5em;
+    }
+
+    header .brand {
+        font-size: 1.2em;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    .navigation.active {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: hsla(0, 0%, 0%, 0.5);
+    }
+
+    .navigation-items a::after {
+        background-color: #222;
+        height: 5px;
+    }
+
+    .navigation .navigation-items {
+        background-color: #fff;
+        width: 600px;
+        margin: 20px;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 5px;
+        box-shadow: 0 5px 5px rgb(1 1 1 / 20%);
+    }
+
+    .navigation .navigation-items a {
+        color: #222;
+        font-size: 1em;
+        margin: 20px;
+    }
+
+    .menu-btn {
+        background-image: url(../img/menu-open.png);
+        background-size: 30px;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+
+    .menu-btn.active {
+        z-index: 999;
+        background: url(../img/close.png);
+        background-size: 30px;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+}
+
+@media(max-width:714px) {
+    .navigation-button-section {
+        top: 0;
+    }
+
+    header .content h1 {
+        font-size: 1.4em;
+    }
+
+    header .content p {
+        font-size: 1em;
+    }
+
+    .navigation-button-section {
+        top: -40px;
+    }
+}
+
+@media(max-width:456px) {
+    header .content h1 span {
+        font-size: 20px;
+    }
+}
+
+
+/*---------Service Section---------------*/
+section.service {
+    width: 100%;
+    height: fit-content;
+    background-color: var(--light);
+}
+
+section.service h1 {
+    font-weight: 700;
+}
+
+section .bg-icon {
+    background-color: var(--primary);
+}
+
+.service-item {
+    height: 320px;
+    background: var(--secondary);
+    transition: .5s;
+    border-radius: 15px;
+}
+
+.service-contenu .bg-icon {
+    background-color: var(--primary);
+    border-radius: 8px;
+}
+
+.service-contenu h1 {
+    color: #8486A0;
+}
+
+
+.service-contenu .bg-icon .service-icon {
+    color: #8486A0;
+}
+
+.service-item:hover .bg-icon {
+    background-color: var(--secondary);
+    transition: 0.5s ease;
+}
+
+.service-item:hover,
+.service-item.active {
+    background: var(--primary);
+    transition: 0.5s ease;
+}
+
+.service-item h1,
+.service-item h4,
+.service-item p {
+    transition: 0.5s ease;
+    color: #8486A0;
+}
+
+.service-item:hover h1 {
+    color: var(--dark) !important;
+}
+
+.service-item:hover h4 {
+    color: var(--light);
+    transition: 0.5s ease;
+}
+
+.service-item:hover p {
+    color: var(--light);
+    transition: .5s ease;
+}
+
+.service-item:hover .service-contenu .bg-icon .service-icon {
+    color: white;
+    transition: .5s ease;
+
+}
+
+
+/* Section Cars */
+section.cars h1 {
+    font-weight: 700;
+}
+
+section.cars .rent {
+    border-radius: 15px;
+}
+
+section.cars .rent-item {
+    padding: 30px;
+    text-align: center;
+    background: var(--secondary);
+    transition: .5s;
+    border-radius: 15px;
+}
+
+.rent-item h4 {
+    color: var(--text-gray);
+}
+
+.rent-item .rent-icon i::before {
+    color: var(--primary);
+}
+
+.rent-item .rent-icon span {
+    color: var(--text-gray);
+}
+
+.rent-item a {
+    background-color: var(--primary);
+    color: white;
+}
+.rent-item a:hover{
+    color:white;
+}
+/*-------------------------------------------------------------*/
+section.cars .rent-item:hover {
+    background: var(--primary);
+    transition: .5s;
+    transform: scale(1.1);
+}
+
+section.cars .rent-item:hover h4 {
+    color: white;
+    transition: .5s;
+}
+
+section.cars .rent-item:hover .rent-icon i::before {
+    color: var(--secondary);
+    transition: .5s;
+}
+
+section.cars .rent-item:hover .rent-icon span {
+    color: white;
+    transition: .5s;
+}
+
+section.cars .rent-item:hover a {
+    background-color: var(--secondary);
+    transition: .5s;
+
+}
+
+/*Contact section*/
+section.contact h1 {
+    font-weight: 700;
+    color: var(--secondary);
+}
+
+section.contact .contact-form {
+    background-color: var(--secondary);
+}
+
+section.contact .contact-form input {
+    height: 40px;
+    margin: 10px 0;
+}
+
+section.contact .contact-form input:focus {
+    box-shadow: 0 0 10px var(--primary);
+    outline: none;
+    border: none;
+}
+
+section.contact .contact-form textarea {
+    margin: 10px 0;
+}
+
+section.contact .contact-form button {
+    background-color: var(--primary);
+    border: var(--primary);
+}
+
+section.contact .contact-form button:hover {
+    background-color: var(--primary-dark);
+    border: var(--primary-dark);
+    transform: scale(1.1);
+    transition: .5s ease;
+}
+
+.bg-blue {
+    background-color: var(--secondary);
+}
+
+.contact-infos h5 {
+    color: var(--primary);
+}
+
+.contact-infos p {
+    color: white;
+}
+
+.contact-infos i::before {
+    margin: 0 5px;
+    color: var(--primary);
+}
+
+/*Reservation Section*/
+.reservation h1 {
+    font-weight: 700;
+    color: var(--secondary);
+}
+
+section .personal h2 {
+    font-weight: 500;
+    color: var(--secondary);
+}
+
+section.reservation input[type="text"],
+section.reservation input[type="email"],
+section.reservation select {
+    height: 40px;
+    width: 320px;
+    margin: 10px 0;
+    border-radius: 8px;
+}
+
+.payment {
+    border-radius: 15px;
+}
+
+.payment h2 {
+    color: var(--primary);
+}
+
+.payment label {
+    color: white;
+}
+
+.payment button {
+    background-color: var(--primary);
+    color: white;
+}
+
+.payment button:hover {
+    background-color: var(--primary-dark);
+    transform: scale(1.1);
+    transition: .5s ease;
+    color: white;
+}
+
+/*Footer Section*/
+.footer h4,
+.footer i::before {
+    color: var(--primary);
+    margin: 0 10px;
+}
+
+.footer p,
+.footer .links a {
+    color: white;
+}
+
+.footer .social-media a {
+    background-color: white;
+    border-radius: 8px;
+    margin: 3px;
+}
